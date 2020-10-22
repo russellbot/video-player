@@ -123,8 +123,8 @@ function openFullscreen(elem) {
     video.classList.add('video-fullscreen');
 }
   
-  /* Close fullscreen */
-  function closeFullscreen() {
+/* Close fullscreen */
+function closeFullscreen() {
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.mozCancelFullScreen) { /* Firefox */
@@ -141,11 +141,7 @@ let fullscreen = false;
 
 // Toggle Fullscreen
 function toggleFullscreen() {
-    if (!fullscreen) {
-        openFullscreen(player);
-    } else {
-        closeFullscreen();
-    }
+    !fullscreen ? openFullscreen(player) : closeFullscreen();
     fullscreen = !fullscreen;
 }
 
